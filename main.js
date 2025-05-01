@@ -1,8 +1,12 @@
 window.onload = () => {
-    const audio = document.getElementById("bg-music");
-    if (audio) {
-        audio.play().catch((e) => {
-            console.log("Autoplay failed, user interaction needed.");
+    document.body.classList.remove("container");
+
+    const music = document.getElementById("bg-music");
+    const button = document.getElementById("playMusic");
+
+    if (button && music) {
+        button.addEventListener("click", () => {
+            music.play();
         });
     }
 };
